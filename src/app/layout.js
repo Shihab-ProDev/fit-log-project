@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
       <Header />
-      <main>
+      <main className="py-12">
       {children}
       </main>  
       </body>
