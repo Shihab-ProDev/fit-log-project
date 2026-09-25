@@ -32,9 +32,6 @@ export default async function Home() {
 
     </div>
 
-
-    <Footer></Footer>
-
     </div>
   );
 }
