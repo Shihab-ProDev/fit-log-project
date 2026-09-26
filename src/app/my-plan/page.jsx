@@ -26,19 +26,19 @@ const MyPlan = () => {
             <div className='border border-[#232732] rounded-2xl p-6 mt-6 grid grid-cols-3'>
                 <div className='space-y-1'>
                     <p className='text-[12px] text-[#8A92A0]'>Exercises</p>
-                    <span className='font-(family-name:-font-oswald) text-[36px] font-bold text-[#CCFF00]'>{plan.length}</span>
+                    <span className='font-(family-name:-font-oswald) text-[28px] md:text-[36px] font-bold text-[#CCFF00]'>{plan.length}</span>
                 </div>
 
                 <div className='space-y-1'>
                     <p className='text-[12px] text-[#8A92A0]'>Minutes</p>
-                    <span className='font-(family-name:-font-oswald) text-[36px] font-bold text-[#ffffff]'>{time.reduce((acc,item) => {
+                    <span className='font-(family-name:-font-oswald) text-[28px] md:text-[36px] font-bold text-[#ffffff]'>{time.reduce((acc,item) => {
                         return acc+item
                     } ,0)}</span>
                 </div>
 
                 <div className='space-y-1'>
                     <p className='text-[12px] text-[#8A92A0]'>Calories</p>
-                    <span className='font-(family-name:-font-oswald) text-[36px] font-bold text-[#ffffff]'>{calories.reduce((acc, item) => {
+                    <span className='font-(family-name:-font-oswald) text-[28px] md:text-[36px] font-bold text-[#ffffff]'>{calories.reduce((acc, item) => {
                         return acc+item
                     } ,0)}</span>
                 </div>
@@ -56,7 +56,7 @@ const MyPlan = () => {
                         <h4 className='font-(family-name:--font-oswald) text-[20px] font-bold'>NOTHING HERE YET</h4>
                         <p className='mt-2 text-[12px] text-[#A1A1AA]'>Browse the library and add a lift to get today moving.</p>
 
-                        <Link href='/workout'>
+                        <Link href='/#library'>
                         <button className='btn py-3 px-6 rounded-4xl bg-[#CCFF00] text-[12px] font-semibold text-[#000000] mt-6'>Go to workout</button>
                         </Link>
                     </div>
@@ -78,7 +78,7 @@ const MyPlan = () => {
                         <h4 className='font-(family-name:--font-oswald) text-[20px] font-bold'>NOTHING HERE YET</h4>
                         <p className='mt-2 text-[12px] text-[#A1A1AA]'>Browse the library and add a lift to get today moving.</p>
 
-                        <Link href='/workout'>
+                        <Link href='/#library'>
                         <button className='btn py-3 px-6 rounded-4xl bg-[#CCFF00] text-[12px] font-semibold text-[#000000] mt-6'>Go to workout</button>
                         </Link>
                     </div>

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useContext } from 'react';
 import { WorkoutContext } from '../context/workoutcontext';
+import { Bounce, toast } from 'react-toastify';
 
 const SaveCloseButton = ({SaveItem}) => {
 
@@ -10,7 +11,17 @@ const SaveCloseButton = ({SaveItem}) => {
     console.log(exclude)
 
     const handleRemovePlan = () =>{
-        setSave(exclude)
+        setSave(exclude);
+        toast.success("Removed the workout", {
+            position: "bottom-left",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            transition: Bounce,
+        });
     }
 
 

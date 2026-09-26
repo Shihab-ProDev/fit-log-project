@@ -25,7 +25,7 @@ const WorkOutDetailPage = async ({ params }) => {
 
 
             <div>
-                <h1 className='font-(family-name:--font-oswald) text-[36px] font-bold uppercase'>{name}</h1>
+                <h1 className='font-(family-name:--font-oswald) text-[28px] md:text-[36px] font-bold uppercase'>{name}</h1>
                 <p className='mt-3 text-[16px] text-[#9CA3AF]'>{description}</p>
 
                 <div className='flex gap-2 mt-5'>
@@ -80,7 +80,7 @@ const WorkOutDetailPage = async ({ params }) => {
                 </div>
 
 
-                <div className='flex gap-4 mt-9'>
+                <div className='flex flex-col md:flex-row gap-4 mt-9'>
                     
                     <PlanButton fitData={fitData}></PlanButton>
                     <SaveButton fitData={fitData}></SaveButton>

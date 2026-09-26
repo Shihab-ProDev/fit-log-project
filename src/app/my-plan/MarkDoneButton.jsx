@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React, { useContext } from 'react';
 import { WorkoutContext } from '../context/workoutcontext';
+import { Bounce, toast } from 'react-toastify';
 
 const MarkDoneButton = ({ planItem }) => {
 
@@ -18,6 +19,16 @@ const MarkDoneButton = ({ planItem }) => {
                     : item
             )
         );
+        toast.success("Marked the workout done", {
+            position: "bottom-left",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            transition: Bounce,
+        });
     };
 
     return (

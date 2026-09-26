@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <WorkOutProvider>
           <Header />
-          <main className="py-12">
+          <main className="py-12 px-5">
             {children}
             <ToastContainer />
           </main>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='container mx-auto py-10 flex items-center justify-between mt-7.5'>
+        <div className='container mx-auto py-10 text-center flex flex-col sm:flex-row items-center justify-between mt-7.5 gap-2'>
             <span className='flex gap-2'>
             <Image src="/assets/footer icon.svg" width={20} height={20} alt='Logo'></Image>
             <p className="font-(family-name:--font-oswald) text-[14px] font-black uppercase">Fitlog</p>
