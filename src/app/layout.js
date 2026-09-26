@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import WorkOutProvider from "./context/workoutcontext";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,13 +38,16 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-      <Header />
-      <main className="py-12">
-      {children}
-      </main>
-      <Footer />
+        <WorkOutProvider>
+          <Header />
+          <main className="py-12">
+            {children}
+            <ToastContainer />
+          </main>
+          <Footer />
+        </WorkOutProvider>
       </body>
-      
+
     </html>
   );
 }

@@ -1,3 +1,5 @@
+import PlanButton from '@/app/components/WorkDetailsButtons/PlanButton';
+import SaveButton from '@/app/components/WorkDetailsButtons/SaveButton';
 import Image from 'next/image';
 import React from 'react';
 
@@ -79,9 +81,10 @@ const WorkOutDetailPage = async ({ params }) => {
 
 
                 <div className='flex gap-4 mt-9'>
-                    <button className='btn py-3 px-6 rounded-xl bg-[#CCFF00] text-[#0F1115] text-[14px] font-semibold'><Image src="/assets/calender.svg" width={16} height={16} alt='calender' /> Add to today&apos;s plan </button>
-
-                    <button className='btn border border-[#374151] rounded-xl py-3 px-6 text-[14px] font-semibold'><Image src="/assets/save.svg" width={16} height={16} alt='calender' /> Save for later</button>
+                    
+                    <PlanButton fitData={fitData}></PlanButton>
+                    <SaveButton fitData={fitData}></SaveButton>
+                    
                 </div>
 
             </div>

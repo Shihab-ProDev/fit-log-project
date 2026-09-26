@@ -13,8 +13,8 @@ const WorkOut = async() => {
         <div className='container mx-auto'>
             <div className="container mx-auto space-y-8.25">
             
-                  <div className="flex flex-col gap-1">
-                    <h2 className="font-(family-name:--font-oswald) font-bold text-[30px] uppercase">The Library</h2>
+                  <div className="flex flex-col gap-1 p-10 text-center bg-[#ffffff21] rounded-xl">
+                    <h2 className="font-(family-name:--font-oswald) font-bold text-[30px] uppercase">All Workouts</h2>
                     <p className="text-[14px] text-[#9CA3AF]">Twelve lifts covering every major muscle group.</p>
                   </div>
             

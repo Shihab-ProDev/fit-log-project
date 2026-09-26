@@ -1,10 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import HeaderCounted from './HeaderCounted';
+
+
+
 
 const Header = () => {
+
+
+
     return (
-        <div className='py-6.5 px-6'>
+        <div className='py-6.5 px-6 bg-[#0F1115] sticky top-0'>
             <div className='container mx-auto flex justify-between'>
                 <Link href='/'>
                 <div className='flex items-center gap-2.5'>
@@ -25,14 +32,8 @@ const Header = () => {
                     </ul>
                 </div>
 
-                <div className='flex gap-6'>
-                    <Link href='/my-plan'>
-                    <button className="btn p-0 text-[12px] bg-transparent">Plan <span className='bg-[#C2F800] w-5 h-5 text-[11px] font-semibold text-[#000000] flex justify-center items-center rounded-4xl'>0</span></button>
-                    </Link>
-
-                    <Link href='/my-plan'>
-                    <button className="btn p-0 text-[12px] bg-transparent">Saved <span className='w-5 h-5 text-[11px] font-semibold text-[#ffffff] flex justify-center items-center rounded-4xl border-2 border-[#2D313B]'>0</span></button>
-                    </Link>
+                <div>
+                    <HeaderCounted></HeaderCounted>
                 </div>
             </div>
         </div>

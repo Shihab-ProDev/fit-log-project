@@ -1,7 +1,5 @@
 import Banner from "./components/banner";
 import FitnessCard from "./components/fitnessCard";
-import Footer from "./components/footer";
-
 
 
 export default async function Home() {
