@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FitLog — Workout Planning & Tracking App
 
-## Getting Started
+FitLog is a modern workout planning and tracking web application built with Next.js. It allows users to browse a workout library, add exercises to their daily workout plan, save workouts for later, track workout progress, and organize exercises using sorting options.
 
-First, run the development server:
+The application is designed with a clean, dark-themed fitness interface and provides a smooth, responsive experience across desktop, tablet, and mobile devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Live Demo](https://fit-log-project-fawn.vercel.app/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
 
-## Learn More
+### 1. Workout Planning
 
-To learn more about Next.js, take a look at the following resources:
+Users can browse the workout library and add exercises to their **Today's Plan**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Add workouts directly from the workout cards
+- Track the number of selected exercises
+- Prevent duplicate workouts from being added
+- Remove workouts from the daily plan
+- View all selected workouts in the My Plan section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Dynamic Workout Statistics
 
-## Deploy on Vercel
+Workout statistics update automatically based on the user's selected exercises.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The dashboard dynamically calculates:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Total exercises
+- Total workout duration
+- Total calories burned
+
+When a workout is added or removed, the statistics update immediately.
+
+### 3. Save Workouts for Later
+
+Users can save workouts without adding them to their current workout plan.
+
+- Save workouts for later
+- View saved workouts separately
+- Remove saved workouts
+- Sort saved workouts by duration, calories, or rating
+
+### 4. Workout Progress Tracking
+
+Users can mark exercises in their **Today's Plan** as completed.
+
+The application keeps track of the completion status of each planned workout, allowing users to easily identify workouts they have already finished.
+
+### 5. Sorting & Interactive User Experience
+
+Users can organize their workouts using the sorting dropdown.
+
+Available sorting options:
+
+- Duration
+- Calories
+- Rating
+
+The application also provides toast notifications using React Toastify for important user actions such as adding, saving, removing, and completing workouts.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Next.js | Build the application and UI |
+| React | Build reusable components and manage UI interactions |
+| Next.js App Router | Handle page navigation and application routing |
+| Tailwind CSS | Styling, layout, and responsive design |
+| DaisyUI | UI components such as buttons, tabs, select elements, and skeleton loaders |
+| React Context API | Manage workout plan and saved workout state globally |
+| React Toastify | Display user feedback and action notifications |
+| JavaScript (ES6+) | Application logic and functionality |
+| REST API | Fetch workout data dynamically |
+| LocalStorage | Persist workout plan and saved workouts after page refresh |
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/
+│   ├── components/
+│   │   ├── Banner.jsx
+│   │   ├── FitnessCard.jsx
+│   │   ├── PlanCard.jsx
+│   │   ├── SaveCard.jsx
+│   │   └── FitnessLibrarySkeleton.jsx
+│   │
+│   ├── context/
+│   │   └── workoutcontext.jsx
+│   │
+│   ├── my-plan/
+│   │   └── page.jsx
+│   │
+│   ├── workouts/
+│   │   └── page.jsx
+│   │
+│   ├── layout.jsx
+│   └── page.jsx
+│
+└── public/
+    └── assets/
