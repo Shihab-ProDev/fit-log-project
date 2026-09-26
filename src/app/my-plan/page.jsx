@@ -98,7 +98,7 @@ const MyPlan = () => {
 
             <div className="mt-8">
 
-                <div className="flex justify-end items-center gap-3">
+                <div className="flex md:justify-end items-center gap-3">
 
                     <p className="text-[#8A92A0] text-[12px]">
                         Sort By
@@ -124,7 +124,7 @@ const MyPlan = () => {
 
                 </div>
 
-                <div className="tabs tabs-box bg-transparent -mt-10">
+                <div className="tabs tabs-box bg-transparent mt-10 md:-mt-10">
 
                     {/* Today's Plan */}
 
