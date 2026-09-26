@@ -31,7 +31,7 @@ const Header = () => {
 
 
     return (
-        <div className='py-6.5 px-3 sm:px-6 bg-[#0F1115] sticky top-0'>
+        <div className='py-6.5 px-3 sm:px-6 bg-[#0F1115] sticky top-0 z-100'>
             <div className='container mx-auto flex justify-between items-center'>
 
 

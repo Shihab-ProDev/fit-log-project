@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useContext, useState } from 'react';
+import React, { Suspense, useContext, useState } from 'react';
 import { WorkoutContext } from '../context/workoutcontext';
 import PlanCard from '../components/PlanCard';
 import SaveCard from '../components/SaveCard';
 import Link from 'next/link';
+import FitnessLibrarySkeleton from '../components/FitnessLibrarySkeleton';
 
 const MyPlan = () => {
     const { plan, save } = useContext(WorkoutContext);
@@ -137,37 +138,39 @@ const MyPlan = () => {
                     />
 
                     <div className="tab-content mt-6 space-y-4">
+                        <Suspense fallback={<FitnessLibrarySkeleton />}>
 
-                        {plan.length > 0 ? (
 
-                            getSortedPlan().map((planItem) => (
-                                <PlanCard
-                                    key={planItem.id}
-                                    planItem={planItem}
-                                />
-                            ))
+                            {plan.length > 0 ? (
 
-                        ) : (
+                                getSortedPlan().map((planItem) => (
+                                    <PlanCard
+                                        key={planItem.id}
+                                        planItem={planItem}
+                                    />
+                                ))
 
-                            <div className="py-25 text-center">
+                            ) : (
 
-                                <h4 className="font-(family-name:--font-oswald) text-[20px] font-bold">
-                                    NOTHING HERE YET
-                                </h4>
+                                <div className="py-25 text-center">
 
-                                <p className="mt-2 text-[12px] text-[#A1A1AA]">
-                                    Browse the library and add a lift to get today moving.
-                                </p>
+                                    <h4 className="font-(family-name:--font-oswald) text-[20px] font-bold">
+                                        NOTHING HERE YET
+                                    </h4>
 
-                                <Link href="/#library">
-                                    <button className="btn py-3 px-6 rounded-4xl bg-[#CCFF00] text-[12px] font-semibold text-[#000000] mt-6">
-                                        Go to workout
-                                    </button>
-                                </Link>
+                                    <p className="mt-2 text-[12px] text-[#A1A1AA]">
+                                        Browse the library and add a lift to get today moving.
+                                    </p>
 
-                            </div>
-                        )}
+                                    <Link href="/#library">
+                                        <button className="btn py-3 px-6 rounded-4xl bg-[#CCFF00] text-[12px] font-semibold text-[#000000] mt-6">
+                                            Go to workout
+                                        </button>
+                                    </Link>
 
+                                </div>
+                            )}
+                        </Suspense>
                     </div>
 
 
@@ -181,37 +184,37 @@ const MyPlan = () => {
                     />
 
                     <div className="tab-content mt-6 space-y-4">
+                        <Suspense fallback={<FitnessLibrarySkeleton />}>
+                            {save.length > 0 ? (
 
-                        {save.length > 0 ? (
+                                getSortedSave().map(SaveItem => (
+                                    <SaveCard
+                                        key={SaveItem.id}
+                                        SaveItem={SaveItem}
+                                    />
+                                ))
 
-                            getSortedSave().map(SaveItem => (
-                                <SaveCard
-                                    key={SaveItem.id}
-                                    SaveItem={SaveItem}
-                                />
-                            ))
+                            ) : (
 
-                        ) : (
+                                <div className="py-25 text-center">
 
-                            <div className="py-25 text-center">
+                                    <h4 className="font-(family-name:--font-oswald) text-[20px] font-bold">
+                                        NOTHING HERE YET
+                                    </h4>
 
-                                <h4 className="font-(family-name:--font-oswald) text-[20px] font-bold">
-                                    NOTHING HERE YET
-                                </h4>
+                                    <p className="mt-2 text-[12px] text-[#A1A1AA]">
+                                        Browse the library and add a lift to get today moving.
+                                    </p>
 
-                                <p className="mt-2 text-[12px] text-[#A1A1AA]">
-                                    Browse the library and add a lift to get today moving.
-                                </p>
+                                    <Link href="/#library">
+                                        <button className="btn py-3 px-6 rounded-4xl bg-[#CCFF00] text-[12px] font-semibold text-[#000000] mt-6">
+                                            Go to workout
+                                        </button>
+                                    </Link>
 
-                                <Link href="/#library">
-                                    <button className="btn py-3 px-6 rounded-4xl bg-[#CCFF00] text-[12px] font-semibold text-[#000000] mt-6">
-                                        Go to workout
-                                    </button>
-                                </Link>
-
-                            </div>
-                        )}
-
+                                </div>
+                            )}
+                        </Suspense>
                     </div>
 
                 </div>
