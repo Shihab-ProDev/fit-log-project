@@ -26,7 +26,7 @@ const MarkDoneButton = ({ planItem }) => {
             disabled={completed}
             className={`btn py-2 px-3.5 rounded-4xl text-[12px] font-semibold flex gap-1.5 ${
                 completed
-                    ? 'bg-[#374151] text-[#9CA3AF] cursor-not-allowed'
+                    ? 'bg-[#CCFF00] text-[#000000] cursor-not-allowed'
                     : 'bg-[#CCFF00] text-[#000000]'
             }`}
         >

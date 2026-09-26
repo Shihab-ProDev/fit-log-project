@@ -45,7 +45,7 @@ const MyPlan = () => {
             </div>
 
 
-            {/* name of each tab group should be unique */}
+            
             <div className="tabs tabs-box bg-transparent mt-8">
                 <input type="radio" name="my_tabs_6" className="tab text-[12px]" aria-label="Today's Plan" defaultChecked />
                 <div className="tab-content mt-6 space-y-4">
