@@ -12,7 +12,7 @@ const WorkOutDetailPage = async ({ params }) => {
     const { id, name, image, muscleGroups, equipment, difficulty, duration, caloriesBurned, sets, reps, rating, description, instructions } = fitData
 
     return (
-        <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-14'>
+        <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-7 lg:gap-14'>
             <div>
                 <Image
                     src={image}
