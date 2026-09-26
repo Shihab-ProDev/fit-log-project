@@ -17,7 +17,7 @@ const Banner = () => {
     };
 
     return (
-        <div className='container mx-auto p-3 md:p-6 lg:p-14 border border-[#222630] rounded-2xl flex flex-col md:flex-row justify-between gap-10'>
+        <div className='container mx-auto p-5 lg:p-14 border border-[#222630] rounded-2xl flex flex-col md:flex-row justify-between gap-10'>
 
             <div className='space-y-5 max-w-140'>
 
